@@ -1,0 +1,22 @@
+{
+  "name": "mrtnzlml/workflow",
+  "description": "Workflow manager for PHP",
+  "homepage": "http://zlml.cz/",
+  "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+  "require": {
+    "nette/di": "^2.4"
+  },
+  "require-dev": {
+    "nette/tester": "^1.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mrtnzlml\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Mrtnzlml\\Tests\\": "tests/"
+    }
+  }
+}
