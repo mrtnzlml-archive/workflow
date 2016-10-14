@@ -1,8 +1,8 @@
 <?php
 
-namespace Mrtnzlml\Tests\Workflow;
+namespace Adeira\Tests\Workflow;
 
-use Mrtnzlml\Workflow\Activity as A;
+use Adeira\Workflow\Activity as A;
 use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';

@@ -1,10 +1,10 @@
 <?php
 
-namespace Mrtnzlml\Tests\Workflow;
+namespace Adeira\Tests\Workflow;
 
-use Mrtnzlml\Workflow\Activity as A;
-use Mrtnzlml\Workflow\Transition as T;
-use Mrtnzlml\Workflow\Workflow as Wkf;
+use Adeira\Workflow\Activity as A;
+use Adeira\Workflow\Transition as T;
+use Adeira\Workflow\Workflow as Wkf;
 use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';
@@ -75,7 +75,7 @@ class Workflow extends \Tester\TestCase
 			function () use ($workflow) {
 				$workflow->runTransition('a_1', 'a_3');
 			},
-			\Mrtnzlml\Workflow\Exceptions\LogicException::class,
+			\Adeira\Workflow\Exceptions\LogicException::class,
 			"Cannot move between activity 'a_1' and 'a_3' because transition doesn't exist."
 		);
 	}

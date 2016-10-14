@@ -1,5 +1,5 @@
 {
-  "name": "mrtnzlml/workflow",
+  "name": "adeira/workflow",
   "description": "Workflow manager for PHP",
   "homepage": "http://zlml.cz/",
   "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
@@ -12,12 +12,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Mrtnzlml\\": "src/"
+      "Adeira\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Mrtnzlml\\Tests\\": "tests/"
+      "Adeira\\Tests\\": "tests/"
     }
   }
 }

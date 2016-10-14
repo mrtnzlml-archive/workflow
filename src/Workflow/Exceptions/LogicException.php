@@ -1,6 +1,6 @@
 <?php
 
-namespace Mrtnzlml\Workflow\Exceptions;
+namespace Adeira\Workflow\Exceptions;
 
 class LogicException extends \LogicException
 {

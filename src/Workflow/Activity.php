@@ -1,6 +1,6 @@
 <?php
 
-namespace Mrtnzlml\Workflow;
+namespace Adeira\Workflow;
 
 /**
  * Workflow activity is at this moment 'dummy' only.

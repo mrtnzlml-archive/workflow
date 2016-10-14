@@ -1,6 +1,6 @@
 <?php
 
-namespace Mrtnzlml\Workflow;
+namespace Adeira\Workflow;
 
 /**
  * @see https://www.odoo.com/documentation/8.0/reference/workflows.html
@@ -39,7 +39,7 @@ class Workflow
 	public function runTransition($fromActivityIdentifier, $toActivityIdentifier, callable  $callback = NULL)
 	{
 		if (!in_array($toActivityIdentifier, $this->getAvailablePaths($fromActivityIdentifier))) {
-			throw new \Mrtnzlml\Workflow\Exceptions\LogicException(
+			throw new \Adeira\Workflow\Exceptions\LogicException(
 				"Cannot move between activity '$fromActivityIdentifier' and '$toActivityIdentifier' because transition doesn't exist."
 			);
 		}

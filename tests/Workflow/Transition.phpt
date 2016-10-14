@@ -1,8 +1,8 @@
 <?php
 
-namespace Mrtnzlml\Tests\Workflow;
+namespace Adeira\Tests\Workflow;
 
-use Mrtnzlml\Workflow\Transition as T;
+use Adeira\Workflow\Transition as T;
 use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';

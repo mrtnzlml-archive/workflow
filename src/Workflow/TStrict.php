@@ -1,6 +1,6 @@
 <?php
 
-namespace Mrtnzlml\Workflow;
+namespace Adeira\Workflow;
 
 use Nette\Utils\ObjectMixin;
 

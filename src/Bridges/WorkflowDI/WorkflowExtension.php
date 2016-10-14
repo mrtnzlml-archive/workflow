@@ -1,9 +1,9 @@
 <?php
 
-namespace Mrtnzlml\Bridges\WorkflowDI;
+namespace Adeira\Bridges\WorkflowDI;
 
-use Mrtnzlml\Workflow\Activity;
-use Mrtnzlml\Workflow\Transition;
+use Adeira\Workflow\Activity;
+use Adeira\Workflow\Transition;
 
 /**
  * Inspiration:
@@ -72,7 +72,7 @@ class WorkflowExtension extends \Nette\DI\CompilerExtension
 
 			//Workflows
 			$builder->addDefinition($this->prefix($workflowName))
-				->setClass(\Mrtnzlml\Workflow\Workflow::class, [
+				->setClass(\Adeira\Workflow\Workflow::class, [
 					$workflowName,
 					$activities,
 					$transitions,
