@@ -2,10 +2,7 @@
 
 namespace Mrtnzlml\Workflow;
 
-/**
- * Workflow activity is at this moment 'dummy' only.
- */
-class Activity
+class Activity implements IRunable
 {
 
 	use TStrict;
@@ -14,14 +11,33 @@ class Activity
 
 	private $identifier;
 
-	public function __construct($identifier)
+	/**
+	 * @var callable
+	 */
+	private $function = 'pi'; // = NOP
+
+	/**
+	 * @var callable
+	 */
+	private $condition = 'pi'; // = NOP
+
+	/**
+	 * @param integer $identifier of the activity
+	 * @param \Closure|NULL $function closure to be called after activity initialization
+	 */
+	public function __construct($identifier, callable $function = NULL)
 	{
 		$this->identifier = $identifier;
+		$this->function = $function;
 	}
 
 	public function run()
 	{
-		//TODO: akce, která se spustí vždy když jsem na nějaké akci (zatím jen 'dummy')
+		if ($this->evaluateCondition()) {
+			call_user_func($this->function, $this);
+			return TRUE;
+		}
+		return FALSE;
 	}
 
 	public function getType()
@@ -32,6 +48,17 @@ class Activity
 	public function getIdentifier()
 	{
 		return $this->identifier;
+	}
+
+	public function setCondition(callable $condition)
+	{
+		$this->condition = $condition;
+		return $this;
+	}
+
+	private function evaluateCondition()
+	{
+		return call_user_func($this->condition, $this);
 	}
 
 }
