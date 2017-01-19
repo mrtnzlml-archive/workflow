@@ -2,7 +2,7 @@
   "name": "adeira/workflow",
   "description": "Workflow manager for PHP",
   "homepage": "http://zlml.cz/",
-  "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+  "license": "MIT",
   "require": {
     "adeira/code-quality": "^1.0",
     "nette/di": "^2.4"
