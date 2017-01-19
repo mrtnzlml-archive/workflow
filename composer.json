@@ -8,7 +8,7 @@
     "nette/di": "^2.4"
   },
   "require-dev": {
-    "nette/tester": "^1.7"
+    "nette/tester": "dev-master"
   },
   "autoload": {
     "psr-4": {
